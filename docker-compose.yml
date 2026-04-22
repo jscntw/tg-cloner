@@ -1,0 +1,11 @@
+services:
+  tg-cloner:
+    build: .
+    container_name: tg-cloner-web
+    restart: always
+    ports:
+      - 48000:48000
+    volumes:
+      - ./.env:/app/.env
+      - ./sessions:/app/sessions
+networks: {}
